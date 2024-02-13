@@ -18,6 +18,22 @@ document.getElementById('yessir').addEventListener('animationend', () => {
   document.querySelector('.image').classList.remove('image-change-animation');
 });
 
+const noButton = document.getElementById('nooo');
+
+// Function to move the button
+function moveButton() {
+    const xMove = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100);
+    const yMove = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100);
+
+    noButton.style.transform = `translate(${xMove}px, ${yMove}px)`;
+    noButton.style.transition = 'transform 0.3s ease'; // Ensure this matches your CSS for smooth movement
+}
+
+// Desktop: Change on mouseover
+noButton.addEventListener('mouseover', moveButton);
+
+// Mobile: Change on touchstart
+noButton.addEventListener('touchstart', moveButton, {passive: true});
 
 document.getElementById('nooo').addEventListener('mouseover', () => {
     // Increase the range for further movement
