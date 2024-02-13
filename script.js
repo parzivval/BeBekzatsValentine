@@ -1,9 +1,21 @@
 document.getElementById('yessir').addEventListener('click', () => {
-    // Change the background image of the .image div to a new GIF
-    document.querySelector('.image').style.backgroundImage = "url('./img/lovegif.gif')";
+    // Get the elements
+    const imageDiv = document.querySelector('.image');
+    const header = document.querySelector('h1');
 
-    // Change the text of the h1 element
-    document.querySelector('h1').textContent = "Я не сомневался в твоем правильном выборе🤍";
+    // Update the image with animation
+    imageDiv.style.backgroundImage = "url('./img/lovegif.gif')";
+    imageDiv.classList.add('image-change-animation');
+
+    // Change the h1 text with animation
+    header.textContent = "Я не сомневался в твоем правильном выборе🤍";
+    header.classList.add('text-change-animation');
+});
+
+// Optional: Remove the animation class after it's done to reset the state
+document.getElementById('yessir').addEventListener('animationend', () => {
+  document.querySelector('h1').classList.remove('text-change-animation');
+  document.querySelector('.image').classList.remove('image-change-animation');
 });
 
 
