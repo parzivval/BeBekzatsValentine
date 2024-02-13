@@ -16,17 +16,9 @@ body {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    min-height: 100vh;
     padding: 20px; /* Ensure there's some padding */
 }
+
 
 .image, .btns button {
     max-width: 90%; /* Ensure these elements fit within small screens */
