@@ -8,10 +8,10 @@ document.getElementById('yessir').addEventListener('click', () => {
 
 
 document.getElementById('nooo').addEventListener('mouseover', () => {
-    // Calculate new positions for the button
-    const xMove = Math.floor(Math.random() * (50 - (-50) + 1)) + (-50);
-    const yMove = Math.floor(Math.random() * (50 - (-50) + 1)) + (-50);
+    // Increase the range for further movement
+    const xMove = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100);
+    const yMove = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100);
 
-    // Use transform for smoother animation
+    // Use transform for smoother and faster animation
     document.getElementById('nooo').style.transform = `translate(${xMove}px, ${yMove}px)`;
 });
