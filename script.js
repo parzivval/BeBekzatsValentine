@@ -4,17 +4,10 @@ document.getElementById('yessir').addEventListener('click', () => {
 });
 
 document.getElementById('nooo').addEventListener('mouseover', () => {
-    leftPos = Math.floor(Math.random() * (50 - (-50) + 1)) + (-50);
-    bottomPos = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100);
-    document.getElementById('nooo').style.position = "absolute";
-    document.getElementById('nooo').style.left = leftPos + "%";
-    document.getElementById('nooo').style.bottom = bottomPos + "%";
-});
+    // Calculate new positions for the button
+    const xMove = Math.floor(Math.random() * (50 - (-50) + 1)) + (-50);
+    const yMove = Math.floor(Math.random() * (50 - (-50) + 1)) + (-50);
 
-document.getElementById('nooo').addEventListener('click', () => {
-    leftPos = Math.floor(Math.random() * (50 - (-50) + 1)) + (-50);
-    bottomPos = Math.floor(Math.random() * (100 - (-100) + 1)) + (-100);
-    document.getElementById('nooo').style.position = "absolute";
-    document.getElementById('nooo').style.left = leftPos + "%";
-    document.getElementById('nooo').style.bottom = bottomPos + "%";
+    // Use transform for smoother animation
+    document.getElementById('nooo').style.transform = `translate(${xMove}px, ${yMove}px)`;
 });
